@@ -8,7 +8,7 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define(
-    'country',
+    'Country',
     {
       id: {
         type: DataTypes.STRING(3),
