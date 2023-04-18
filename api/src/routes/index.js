@@ -37,7 +37,7 @@ router.get('/countries', async (req, res) => {
       });
       return res.status(200).json(countries);
     } else {
-      //* GET - PAISES QUE COINCIDA ?NAME CON EL NOMBRE (SUBTRING)
+      //* GET - ALLBY?NAME (SUBTRING & QUERY)
 
       //Si sí hay params.name, ej:
       //? countries?name=lan
@@ -72,8 +72,11 @@ router.get('/countries/:idCountry', async (req, res) => {
   //Toma el ID de la URL y lo guarda en params.
   const { idCountry } = req.params;
   try {
-    //Se lo pasamos al controller y retornamos la respuesta.
-    const countryDetail = await getDetailCountry(idCountry);
+    const countryDetail = await Country.findOne({
+      where: {
+        id: idCountry.toUpperCase(),
+      },
+    });
     return res.status(200).json(countryDetail);
   } catch (error) {
     return res.status(400).json({ error: error.message });
