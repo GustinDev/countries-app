@@ -21,8 +21,9 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { saveApiData } = require('./src/controllers/saveApiData.js');
 
+//FORCE:FALSE -> Save POST (true para reuniciar).
 // Syncing all the models at once.
-conn.sync({ force: true }).then(async () => {
+conn.sync({ force: false }).then(async () => {
   console.log('DB Conectada - Master');
   //Poner para ver si recibe data, la clg:
   //await saveApiData();

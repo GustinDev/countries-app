@@ -35,10 +35,15 @@ const getApiData = async () => {
 
 const saveApiData = async () => {
   try {
-    //Guarda la info de getApiData en el array.
-    const array = await getApiData();
-    //Country Hace referencia a la tabla. Le pasa la data a la table y la crea.
-    await Country.bulkCreate(array);
+    //Creamos una var donde se muestre si ya hay countries inyectados en la DB (si no, crashea por el force:false).
+    const areCountries = await Country.findAll();
+    //Si no, los inyecta.
+    if (!areCountries.length) {
+      //Guarda la info de getApiData en el array.
+      const array = await getApiData();
+      //Country Hace referencia a la tabla. Le pasa la data a la table y la crea.
+      await Country.bulkCreate(array);
+    }
   } catch (error) {
     console.log(error);
   }

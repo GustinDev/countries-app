@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
           max: 5,
           isEven(value) {
             if (value < 1 || value > 5) {
-              throw new Error('La dificultad debe ser entre 1 y 5');
+              throw new Error('Selecione una dificultad entre 1 y 5');
             }
           },
         },
@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
           max: 24,
           isEven(value) {
             if (value < 1 || value > 24) {
-              throw new Error('La duración debe ser de 1 a 24');
+              throw new Error('Selecione una duracion entre 1 a 24');
             }
           },
         },
