@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 100%;
+}
+
+.background {
+  background-color: #c6c6c6;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 1000;
+  font-size: 10vw;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  margin: 50px;
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='36' cy='-100' r='66' fill='%2300FDCF'/%3E%3Ccircle cx='17.5' cy='408.5' r='.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='690' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+.buttonOne {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: -550;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: 0px solid #000;
+  border-radius: 10px;
+  color: #fff;
+  background: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 12px 20px;
+  text-align: center;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonOne:hover {
+  color: #00271f;
+  background-color: #40bfa6;
+}
