@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  font-family: 'Bebas Neue', cursive;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar2 {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.navbar2 h3 {
+  font-size: 25px;
+  text-decoration: none;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

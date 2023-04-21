@@ -5,7 +5,7 @@ import style from './Landing.module.css';
 function Landing() {
   return (
     <div className='container'>
-      <p>
+      <p className='ptitle'>
         <span className={style.fancy}>
           {' '}
           Global <br />{' '}

@@ -1,0 +1,26 @@
+.contenedorCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  align-items: flex-end;
+  justify-items: center;
+  flex-direction: row;
+  align-content: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.NavContainer {
+  display: flex;
+  background-color: grey;
+}
+
+.filtros {
+  display: flex;
+}
